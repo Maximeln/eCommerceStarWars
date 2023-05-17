@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre panier</title>
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="styles-panier.css">
+    <script src="script-panier.js" defer></script>
+</head>
+
+<body>
+<!-- Menu en-tête par Hugues -->
+    <header>
+        <nav>
+            <div class="menu-container">
+                <div class="logo">
+                    <a href="magasinStarWars.html"><img src="images/starWarsLogo.png" alt="Star Wars Logo"></a>
+                </div>
+                <ul class="menu">
+                    <div class="menu-buttons">
+                        <li class="first-tab">Sabre laser</li>
+                        <li class="second-tab">Pouvoir</li>
+                        <li class="third-tab">Vaisseau</li>
+                        <a href="equipe.html"><li class="fourth-tab">L'équipe</li></a>
+                    </div>
+                </ul>
+                <div class="logSign">
+                    <div class="signIn"><img src="images/signInStarWars.png" alt="Login Logo" style="height: 45px"></div>
+                        <div class="textSignIn">Sign in</div>
+                    <div class="logIn"><img src="images/logInStarWars.png" alt="Login Logo" style="height: 35px"></div>
+                    <div class="textLogIn">Log in</div>
+                </div>
+                <div class="panierLogo">
+                    <div class="panier"><a href="panier.html"><img src="images/vaisseauPannier2.png" alt="panier Logo" style="height: 45px"></a></div>
+                        <div class="textPanier">Panier</div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!-- Partie page panier -->
+<!-- En-tête du panier avec sac + "Je suis ton panier "-->
+    <div class="panier-panier">
+        <img src="images/panier1.png" alt="panier avec chewbacca" width="150">
+        <h1>Je suis ton panier</h1>
+    </div>
+
+<!-- Partie Tableau HTML avec contenu du panier -->
+    <table>
+            <thead>
+                <tr>
+                    <th colspan="3">Produits sélectionnés</th>
+                    <th>Quantité</th>
+                    <th>Sous-Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="ligne1">
+                    <th class="photo-produit"><img src="images/death-star.jpg" alt="costume étoile de la mort"></th>
+                    <td>Outfit death star</td>
+                    <td>Avec ce costume, les jedis en auront après vous</td>
+                    <td>
+                        <input type="button" class="buttonMoins" id="buttonMoins1" name="buttonMoins" title="enlever un article" value="-">
+                        <input type="text" class="number" id="number1" name="number" value="1" readonly>
+                        <input type="button" class="buttonPlus" id="buttonPlus1" name="buttonPlus" title="ajouter un article" value="+">
+                        <button title="supprimer le ou les article(s)" id="deleteButton1" type="submit"><img src="images/trash.svg" alt="icône poubelle"></button>
+                    </td>
+                    <td><input type="text" class="subtotal" id="subtotal1" name="number" value="10" readonly>CG</td>
+                </tr>
+                <tr id="ligne2">
+                    <th class="photo-produit"><img src="images/outfit-r2d2.jpg" alt="costume R2D2"></th>
+                    <td>Outfit R2D2</td>
+                    <td>C3 fois rien, achetez en 2</td>
+                    <td>
+                        <input type="button" class="buttonMoins" id="buttonMoins2" name="buttonMoins" title="enlever un article" value="-">
+                        <input type="text" class="number" id="number2" name="number" value="1" readonly>
+                        <input type="button" class="buttonPlus" id="buttonPlus2" name="buttonPlus" title="ajouter un article" value="+">
+                        <button title="supprimer le ou les article(s)" id="deleteButton2" type="submit"><img src="images/trash.svg" alt="icône poubelle"></button>
+                    </td>
+                    <td><input type="text" id="subtotal2" name="number" value="10" readonly>CG</td>
+                </tr>
+                <tr id="ligne3">
+                    <th class="photo-produit"><img src="images/outfit-chewbacca.jpg" alt="costume Chewbacca"></th>
+                    <td>Outfit Chewbacca</td>
+                    <td>Manque plus que le cri typique "Raaaawrgrwhhgr !"</td>
+                    <td>
+                        <input type="button" class="buttonMoins" id="buttonMoins3" name="buttonMoins" title="enlever un article" value="-">
+                        <input type="text" class="number" id="number3" name="number" value="1" readonly>
+                        <input type="button" class="buttonPlus" id="buttonPlus3" name="buttonPlus" title="ajouter un article" value="+">
+                        <button title="supprimer le ou les article(s)" id="deleteButton3" type="submit"><img src="images/trash.svg" alt="icône poubelle"></button>
+                    </td>
+                    <td><input type="text" class="subtotal" id="subtotal3" name="number" value="10" readonly>CG</td>
+                </tr>
+            </tbody>
+    </table>
+
+<!-- Volet paiement avec prix total -->
+    <div class="paiement">
+        <div class="paiement-container">
+            <p>Total</p>
+            <p><input type="text" class="total" id="total" name="number" value="30" readonly>Crédits Galactiques</p>
+            <button><img src="images/yoda-paiement.png" alt="Icône Yoda">Au paiement, procéder maintenant</button>
+        </div>
+    </div>
+
+<!-- Footer par Hugues -->
+<div class="reseauxSociaux">
+    <h2 class="vousAimez">Vous aimez notre boutique ? Partagez la.</h2>
+    <div class="likePartage">
+        <div class="reseaux"> 
+            <img src="images/facebookLogo.png" alt="reseaux logo">
+            <!-- <div class="partage">Partage.</div> -->
+        </div>
+        <div class="reseaux">
+            <img src="images/twitterLogo.png" alt="reseaux logo">
+            <!-- <div class="partage">Partage.</div> -->
+        </div>
+        <div class="reseaux"> 
+            <img src="images/instagramLogo.png" alt="reseaux logo">
+            <!-- <div class="partage">Partage.</div> -->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

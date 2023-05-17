@@ -1,0 +1,386 @@
+@font-face {
+    font-family: redfive;
+    src: url("polices/design.collection3.RedFive.ttf");
+}
+
+@font-face {
+    font-family: grotesk;
+    src: url("polices/SpaceGrotesk-Light.ttf");
+}
+
+/* Les bases de la page web */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+
+    font-family: 'grotesk', sans-serif;
+
+    background-color: #000000;
+    background-image: url("images/bannière.png");
+}
+
+
+/* Menu En tête par Hugues */
+.menu-container {
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    /* color: rgb(50, 50, 50); */
+    background-color: rgb(61, 58, 58);  
+    height: 100px;
+    font-family: 'redfive', sans-serif;
+    font-size: 20px;
+}
+.logo {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.logo img{
+  height: 70px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    width: 75%;
+    list-style-type: none;  
+    font-family: 'redfive', sans-serif;
+    text-shadow: #fcdc21 1px 1px, #fcdc21 -1px 1px, #fcdc21 -1px -1px, #fcdc21 1px -1px;
+}
+
+.menu-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  list-style-type: none; 
+  height: 70px; 
+  font-family: 'redfive', sans-serif;
+}
+
+
+.first-tab, .second-tab, .third-tab, .fourth-tab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      width: 100%;
+      padding: 50px;
+      font-family: 'redfive', sans-serif;
+      transition: 500ms ;
+}
+
+.first-tab:hover, .second-tab:hover, .third-tab:hover, .fourth-tab:hover {
+      background-color: #fcdc21;
+      color: #fcdc21;
+      text-shadow: #000 1px 1px, #000 -1px 1px, #000 -1px -1px, #000 1px -1px;
+      opacity: 1;
+      cursor: pointer;
+      font-family: 'redfive', sans-serif;
+} 
+
+a{
+    text-decoration: none;
+    color: #000;
+  }
+
+.logSign{
+    display: column;
+    justify-content: center;
+    align-content: center;
+    width: 100px;
+}
+
+.signIn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    transition: 150ms transform linear;
+}
+
+.signIn:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.textSignIn{
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.logIn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    transition: 150ms transform linear;
+}
+
+.logIn:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.textLogIn{
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.panierLogo{
+  display: column;
+  justify-self: center;
+  align-self: center;
+  width: 100px;
+  transition: 150ms transform linear;
+}
+
+.panierLogo:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.panier{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+.textPanier{
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+}
+
+/* Début body de la page panier */
+
+/* En tête du panier avec sac + "Je suis ton panier" */
+.panier-panier {
+    display: flex;
+    padding: 20px;
+
+    border-top: 1px solid #fcdc21;
+    border-bottom: 1px solid #353011;
+}
+
+.panier-panier h1 {
+    display: flex;
+    align-items: center;
+
+    font-family: "redfive", arial;
+    font-size: 40px;
+    text-shadow: #fcdc21 2px 2px, #fcdc21 -2px 2px, #fcdc21 -2px -2px, #fcdc21 2px -2px;
+}
+
+/* Mettre un hover pour obtenir disposition générique début Star Wars?
+.panier h1:hover {
+    transform-origin: center bottom;
+    transform: perspective(300px) rotateX(25deg);
+}*/
+
+/* Partie Tableau HTML avec contenu du panier */
+/*utiliser cursor: not-allowed pour empêcher d'appuyer sur "-" quand le nb de produit est à 1 ? -> dans ce cas il faut supprimer le produit*/
+table {
+    color: #FFFFFF;
+
+    padding: 30px 15px;
+    width: 80%;
+    margin: 0 auto;
+
+    border-bottom: 1px solid #fcdc21;
+}
+
+thead {
+    font-size: 22px;
+    text-align: left;
+    height: 50px;
+}
+
+.photo-produit img {
+    border-radius: 50px;
+    border: 2px solid #fcdc21;
+    height: 100px;
+    transition: 500ms transform linear;
+}
+
+.photo-produit img:hover {
+    transform: scale(1.1) rotate(1turn);
+}
+
+/* boutons + et - */
+tbody input[type="button"] {
+    cursor: pointer;
+    border: #000000 1px solid;
+    border-radius: 5px;
+
+    padding: 0px 5px;
+    margin: 10px;
+
+    font-size: 20px;
+}
+
+tbody input[type="button"]:hover {
+    background-color: #fcdc21;
+    border: #000000 1px solid;
+}
+
+/* bouton type text quantité et prix */
+tbody input[type="text"] {
+    width: 28px;
+
+    border-radius: 5px;
+    border: #000000 1px solid;
+    background-color: #000000;
+    color: #FFFFFF;
+
+    padding: 4px 5px 2px 5px;
+
+    font-size: 15px;
+}
+
+/* bouton poubelle */
+tbody button {
+    cursor: pointer;
+    border: #000000 1px solid;
+    border-radius: 5px;
+
+    padding: 0px 5px;
+    margin: 10px;
+
+    font-size: 20px;
+}
+
+tbody button img {
+    width: 10px;
+}
+
+tbody button:hover {
+    background-color: #fcdc21;
+    border: #000000 1px solid;
+}
+
+
+/* Partie paiement */
+
+.paiement {
+    color: #FFFFFF;
+    padding: 20px;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.paiement .container {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+.paiement input[type="text"] {
+    width: 60px;
+
+    border-radius: 5px;
+    border: #000000 1px solid;
+    background-color: #000000;
+    color: #FFFFFF;
+
+    padding: 4px 5px 2px 5px;
+
+    font-size: 30px;
+}
+
+.paiement button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+
+    border-radius: 10px;
+    border: #fcdc21 2px solid;
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    
+    font-family: 'grotesk';
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.paiement button img {
+    width: 50px;
+    margin: 0 10px 0 0 ;
+}
+
+.paiement button:hover {
+    border: #000000 2px solid;
+    background-color: #fcdc21;
+    color: #000000;
+}
+
+
+/* Footer par Hugues */
+.reseauxSociaux{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: redfive, sans-serif;
+    background-color: rgb(61, 58, 58);
+    text-shadow: #fcdc21 1px 1px, #fcdc21 -1px 1px, #fcdc21 -1px -1px, #fcdc21 1px -1px;
+    height: 300px;
+    border-top: 1px solid #fcdc21;
+}
+
+.vousAimez{
+    font-size: 40px;
+    width: 600px;
+    text-align: center;
+  }
+
+  .likePartage{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px;
+    margin-bottom: 40px;
+  }
+
+  .reseaux{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+
+  .reseaux img{
+    height: 80px;
+    width: 80px;
+    transition: 150ms transform linear;
+  }
+
+  .reseaux:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .partage{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+  }

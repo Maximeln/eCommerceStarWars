@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+
+  }
+
+  @font-face {
+    font-family: redfive;
+    src: url("design.collection3.RedFive.ttf");
+  }
+  @font-face {
+  font-family: SpaceGrotesk;
+  src: url("polices/SpaceGrotesk-Light.ttf");
+}
+
+  /* ------------------header------------------ */
+
+
+.menu-container {
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    /* color: rgb(50, 50, 50); */
+    background-color: rgb(61, 58, 58);    
+    height: 100px;
+    font-family: 'redfive', sans-serif;
+    font-size: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.logo img{
+  height: 70px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    width: 75%;
+    list-style-type: none;  
+    font-family: 'redfive', sans-serif;
+    text-shadow: #fcdc21 1px 1px, #fcdc21 -1px 1px, #fcdc21 -1px -1px, #fcdc21 1px -1px;
+}
+
+.menu-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  list-style-type: none; 
+  height: 70px; 
+  font-family: 'redfive', sans-serif;
+}
+
+
+.first-tab, .second-tab, .third-tab, .fourth-tab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      width: 100%;
+      padding: 50px;
+      font-family: 'redfive', sans-serif;
+      transition: 500ms ;
+}
+
+.first-tab:hover, .second-tab:hover, .third-tab:hover, .fourth-tab:hover {
+      background-color: #fcdc21;
+      color: #fcdc21;
+      text-shadow: #000 1px 1px, #000 -1px 1px, #000 -1px -1px, #000 1px -1px;
+      opacity: 1;
+      cursor: pointer;
+      font-family: 'redfive', sans-serif;
+} 
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+.logSign{
+    display: column;
+    justify-content: center;
+    align-content: center;
+    width: 100px;
+}
+
+.signIn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    transition: 150ms transform linear;
+}
+
+.signIn:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.textSignIn{
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.logIn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    transition: 150ms transform linear;
+}
+
+.logIn:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.textLogIn{
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.panierLogo{
+  display: column;
+  justify-self: center;
+  align-self: center;
+  width: 100px;
+  transition: 150ms transform linear;
+}
+
+.panierLogo:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.panier{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+.textPanier{
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+}
+
+  /* ------------------body------------------ */
+
+    /* ------------------présentationBoutique------------------ */
+
+.presentationBoutique{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* background-color: rgb(70, 70, 70); */
+    background-image: url("images/bannière.png");
+    border-top: 1px solid #fcdc21;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  }
+  
+  #carousel-item1, #carousel-item2, #carousel-item3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; 
+    text-align: center;
+  }
+  
+  #carousel-item1 img, #carousel-item2 img, #carousel-item3 img{    object-fit: cover;
+    width: 80%;
+    height: 55%;
+    border-radius: 50%;
+  }
+
+  .titreProduits{
+    font-family: 'redfive', sans-serif;
+    color: #000;
+    text-shadow: #fcdc21 1px 1px, #fcdc21 -1px 1px, #fcdc21 -1px -1px, #fcdc21 1px -1px;
+    margin: 5px;
+  }
+
+  .descriptionTypeProduit{
+    font-family: SpaceGrotesk, sans-serif;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+    /* text-shadow: #fcdc21 1px 1px, #fcdc21 -1px 1px, #fcdc21 -1px -1px, #fcdc21 1px -1px; */
+    margin: 10px;
+  }
+
+
+
+  /* --------nosSabreEtAccessoirsSabre--------- */
+
+  .nosProduitsEtAccessoirs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    background-image: url("images/bannière.png");
+    font-family: 'redfive', sans-serif;
+    height: 1800px;
+    /* border-top: 1px solid #fcdc21; */
+    border-bottom: 1px solid #fcdc21;
+  }
+
+  .famillesDeProduits{
+    background-color: #fcdc21;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 20px;
+  }
+
+  .sabresProduits{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: rgb(220, 220, 220);
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .vaisseauxProduits{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: rgb(220, 220, 220);
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .formationsProduits{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: rgb(220, 220, 220);
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .sabresItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 400px;
+    width: 300px;
+  }
+
+  .imagesProduits {
+    height: 240px;
+    width: 240px;
+    border-radius: 10px;
+    transition: 300ms transform linear;
+  }
+
+  .imagesProduits:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .vaisseauxItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 400px;
+    width: 300px;
+  }
+
+
+
+  .formationsItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 400px;
+    width: 300px;
+  }
+
+  .ajouterSuprimerDuPanier{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(220, 220, 220);
+    width: 95%;
+  }
+
+  .ajouterSuprimerDuPanier img{
+    margin: 10px;
+    height: 25px;
+    width: 20px;
+  }
+
+  .suprimer{
+    transition: 150ms transform linear;
+  }
+
+  .suprimer:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  .caseNbAjout{
+    width: 90px;
+  }
+
+  .boutonPlus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    height: 25px;
+    width: 20px;
+    transition: 150ms transform linear;
+  }
+
+  .boutonPlus:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  .boutonEnvoiPanier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    height: 25px;
+    width: 20px;
+  }
+
+  .boutonEnvoiPanier img{
+    height: 35px;
+    width: 35px;
+    transition: 150ms transform linear;
+  }
+
+
+  .boutonEnvoiPanier:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+
+  /* .imagesProduits img{
+    height: 200px;
+    width: 200px; 
+  } */
+
+  .descriptionProduit{
+    font-family: SpaceGrotesk, sans-serif;
+    font-size: 14px;
+  }
+
+  .prix{
+    font-size: 14px;
+    text-shadow: #fcdc21 1px 1px, #fcdc21 -1px 1px, #fcdc21 -1px -1px, #fcdc21 1px -1px;
+  }
+
+    /* --------reseauxSociaux--------- */
+
+
+  .reseauxSociaux{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: redfive, sans-serif;
+    background-color: rgb(61, 58, 58);
+    text-shadow: #fcdc21 1px 1px, #fcdc21 -1px 1px, #fcdc21 -1px -1px, #fcdc21 1px -1px;
+    height: 300px;
+  }
+
+  .vousAimez{
+    font-size: 40px;
+    width: 600px;
+    text-align: center;
+  }
+
+  .likePartage{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px;
+    margin-bottom: 40px;
+  }
+
+  .reseaux{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+
+  .reseaux img{
+    height: 80px;
+    width: 80px;
+    transition: 150ms transform linear;
+  }
+
+  .reseaux:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .partage{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+
